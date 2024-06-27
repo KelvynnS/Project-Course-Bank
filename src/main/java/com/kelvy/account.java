@@ -5,8 +5,10 @@ public class account {
     private String name;
     private int id;
     private Double balance;
-    private Double totalValue;
     private String accountData;
+
+    public account() {
+    }
 
     public String getName() {
         return name;
@@ -26,11 +28,14 @@ public class account {
     public void setBalance(Double balance) {
         this.balance = balance;
     }
-    public Double getTotalValue() {
-        return totalValue;
+    public void saque(Double d){
+        this.balance = this.balance - d - 5;
     }
     public String getAccountData() {
         return accountData;
+    }
+    public void deposito(Double m){
+        this.balance = this.balance + m;
     }
 
 }
